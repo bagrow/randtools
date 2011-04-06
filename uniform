@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+# uniform
+# Jim Bagrow
+# Last Modified: 2011-04-06
+
+import sys, os
+from random import *
+
+if __name__ == '__main__':
+    
+    try:
+        num_samples = int(sys.argv[1])
+    except:
+        sys.exit("USAGE: %s number_of_samples" % sys.argv[0])
+    
+    sys.stdout.write("".join("%f\n" % random() for x in xrange(num_samples)))
+    sys.stdout.flush()
+
+
+
